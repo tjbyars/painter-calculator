@@ -5,12 +5,12 @@ import java.util.Iterator;
 
 public class Calculator {
 
-    public float CalculateRoomSize(ArrayList<ArrayList<Float>> dimensions) {
-        float roomSize;
-        ArrayList<Float> posDim = dimensions.get(0);
-        ArrayList<Float> negDim = dimensions.get(1);
-        float posTotal = this.SumArrayList(posDim);
-        float negTotal = 0.0F;
+    public double CalculateRoomSize(ArrayList<ArrayList<Double>> dimensions) {
+        double roomSize;
+        ArrayList<Double> posDim = dimensions.get(0);
+        ArrayList<Double> negDim = dimensions.get(1);
+        double posTotal = this.SumArrayList(posDim);
+        double negTotal = 0.0F;
         if (!negDim.isEmpty()) {
             negTotal = this.SumArrayList(negDim);
         }
@@ -18,15 +18,15 @@ public class Calculator {
         return roomSize;
     }
 
-    public float SumArrayList(ArrayList<Float> arrList) {
-        float sum = 0.0F;
-        for (float f : arrList) {
+    public double SumArrayList(ArrayList<Double> arrList) {
+        double sum = 0.0F;
+        for (double f : arrList) {
             sum += f;
         }
         return sum;
     }
 
-    public float calculateTotalPaint(float roomSize, float paintCoverage, int coatsOfPaint) {
-        return roomSize / paintCoverage * (float)coatsOfPaint;
+    public double calculateTotalPaint(double roomSize, double paintCoverage, int coatsOfPaint) {
+        return roomSize / paintCoverage * (double)coatsOfPaint;
     }
 }
